@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<title>testing a simple function with an array</title>
+<head>
+  <title></title>
+</head>
+<body>
+  <p id="one"></p>
+  <script>
+    function getsize(width, height, depth) {
+      var area = width * height;
+      var volume = width * height * depth;
+      var sizes = [area, volume];
+      return sizes;
+    }
+    document.getElementById('one').innerHTML ='volume = ' + getsize(3,4,5)[1];
+  </script>
+</body>
+</html>

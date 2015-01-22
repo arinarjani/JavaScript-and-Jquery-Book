@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>Using Constructor Notation</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("http://javascriptbook.com/code/c03/images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  #hotel-logo {
+  }
+  #hotel-rooms {
+    position: absolute;
+    top: 0px;
+    left: 73%;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+  }
+  table {
+    margin: 30px auto 0 auto;
+    width: 200px;
+    text-align: center;
+  }
+  td {
+    padding: 5px;
+  }
+  #header {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+  }
+  .name {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
+  <section id="hotel-logo">
+    <img src="http://javascriptbook.com/code/c03/images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="hotel-rooms">
+    <table>
+      <tr>
+        <td id="header">Hotel Availability</td>
+      </tr>
+      <tr>
+        <td class="name"><p id="name1"></p><p id="name2"></p></td>
+      </tr>
+    </table>
+  </section>
+  <script>
+  <!-- Place JavaScript Here
+    function Hotel(name, rooms, booked) {
+      this.name = name;
+      this.rooms = rooms;
+      this.booked = booked;
+      this.checkAvailability = function() {
+        return this.rooms - this.booked;
+      };
+    }
+    var quayHotel = new Hotel('Quay', 40, 25),
+        parkHotel = new Hotel('Park', 120, 77);
+    var details1 = quayHotel.name + ' rooms: ' + quayHotel.checkAvailability(),
+        details2 = parkHotel.name + ' rooms: ' + parkHotel.checkAvailability();
+    document.getElementById('name1').innerHTML = details1;
+    document.getElementById('name2').innerHTML = details2;
+  -->
+  </script>
+  <noscript>Please Update Your Browser</noscript>
+</body>
+</html>

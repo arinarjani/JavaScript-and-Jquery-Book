@@ -1,0 +1,75 @@
+<!doctpye html>
+<html>
+<head>
+  <title></title>
+  <style>
+    table, th, td {
+      padding: 3px;
+    }
+    table {
+      width: 400px;
+      text-align: center;
+      margin-left: 50px;
+      padding-top: 20px;
+    }
+    th {
+      padding-bottom: 20px;
+    }
+    body {
+      background: url("http://javascriptbook.com/code/c02/images/hobart.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    section {
+      background: white;
+      width: 500px;
+      height: 250px;
+      margin: 20% auto 0 auto;
+      border: 3px double black;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <table>
+      <th id="main_name" colspan="2"></th>
+      <tr>
+        <td>Custom Sign:</td>
+        <td id="userSign"></td>
+      </tr>
+      <tr>
+        <td>Total Tiles:</td>
+        <td id="tiles"></td>
+      </tr>
+      <tr>
+        <td>Subtotal:</td>
+        <td id="subTotal"></td>
+      </tr>
+      <tr>
+        <td>Shipping:</td>
+        <td id="shipping"></td>
+      </tr>
+      <tr>
+        <td>Grand Total:</td>
+        <td id="total"></td>
+      </tr>
+    </table>
+  </section>
+<script>
+  // create globals
+  var main_name = 'Howdy Molly, please check your order',
+      userSign = 'Montague House',
+      tiles = userSign.length,
+      subTotal = tiles * 5,
+      shipping = 7,
+      total = subTotal + shipping;
+
+  // write content into html
+  document.getElementById('main_name').innerHTML = main_name;
+  document.getElementById('userSign').innerHTML = userSign;
+  document.getElementById('tiles').innerHTML = tiles;
+  document.getElementById('subTotal').innerHTML = '$' + subTotal;
+  document.getElementById('shipping').innerHTML = '$' + shipping;
+  document.getElementById('total').innerHTML = '$' + total;
+</script>
+</body>
+</html>

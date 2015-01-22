@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("http://javascriptbook.com/code/c03/images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  #hotel-logo {
+  }
+  #hotel-rooms {
+    position: absolute;
+    top: 0px;
+    left: 73%;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+  }
+  table {
+    margin: 50px auto 0 auto;
+    width: 200px;
+    text-align: center;
+  }
+  td {
+    padding: 5px;
+  }
+  #header {
+    color: rgba(0, 255, 153, 0.59);a
+    font-size: 1.5em;
+  }
+  #title {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    font-size: 1.3em;
+  }
+  #rooms {
+    font-size: 5em;
+    color: #f2a655;
+  }
+  #left {
+    position: relative;
+    top: -25px;
+    left: 35%;
+    font-size: 1.2em;
+  }
+  .false {
+    color: red;
+  }
+  .true {
+    color: green;
+  }
+</style>
+</head>
+<body>
+  <section id="hotel-logo">
+    <img src="http://javascriptbook.com/code/c03/images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="hotel-rooms">
+    <table>
+      <tr>
+        <td id="header" colspan="2">Hotel Availability</td>
+      </tr>
+      <tr>
+        <td id="title" colspan="2">PARK</td>
+      </tr>
+      <tr>
+        <td id="pool">Pool</td>
+        <td id="yes_no_one"></td>
+      </tr>
+      <tr>
+        <td id="gym">Gym</td>
+        <td id="yes_no_two"></td>
+      </tr>
+    </table>
+  </section>
+  <script>
+    var hotel = {
+      rooms: 45,
+      checkRooms: function() {
+        return this.rooms - this.booked;
+      }
+    };
+    hotel.pool = false;
+    hotel.gym = true;
+    if (hotel.pool == true) {
+      document.getElementById('yes_no_one').className = 'true';
+      document.getElementById('yes_no_one').innerHTML = '&#10004;';
+    } else {
+      document.getElementById('yes_no_one').className = 'false';
+      document.getElementById('yes_no_one').innerHTML = '&#10006;';
+    }
+    if(hotel.gym == true) {
+      document.getElementById('yes_no_two').className = 'true';
+      document.getElementById('yes_no_two').innerHTML = '&#10004;';
+    } else {
+      document.getElementById('yes_no_two').className = 'false';
+      document.getElementById('yes_no_two').innerHTML = '&#10006;';
+    }
+  </script>
+</body>
+</html>

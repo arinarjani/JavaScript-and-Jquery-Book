@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>Accessing an Object With Dot Notation</title>
+  <style>
+
+  </style>
+</head>
+<body>
+    <table>
+      <tr>
+        <td>Hotel Name:</td>
+        <td id="one"></td>
+      </tr>
+      <tr>
+        <td>Total Rooms:</td>
+        <td id="two"></td>
+      </tr>
+      <tr>
+        <td>Rooms Booked:</td>
+        <td id="three"></td>
+      </tr>
+      <tr>
+        <td>Rooms Available:</td>
+        <td id="four"></td>
+      </tr>
+    </table>
+<script>
+    var hotel = {
+      name: 'Quay',
+      rooms: 40,
+      booked: 24,
+      checkAvailability: function() {
+        return this.rooms - this.booked;
+      }
+    };
+    document.getElementById('one').innerHTML = hotel.name;
+    document.getElementById('two').innerHTML = hotel.rooms;
+    document.getElementById('three').innerHTML = hotel.booked;
+    document.getElementById('four').innerHTML =hotel.checkAvailability();
+</script>
+</body>
+</html>

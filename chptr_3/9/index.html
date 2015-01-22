@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <title>Document Object Examples</title>
+  <style>
+  /*fonts*/
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("http://javascriptbook.com/code/c03/images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: "Open Sans Condensed" ,sans-serif;
+  }
+  #hotel-logo {
+  }
+  #screen_data {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+    text-align: center;
+    z-index: 10;
+  }
+  h2 {
+    font-weight: normal;
+    padding: 5px;
+    color: aqua;
+    font-size: 2em;
+  }
+  h2:first-of-type {
+    margin-top: 30px;
+  }
+  #hotels {
+    position: absolute;
+    top: 153px;
+    left: 95px;
+    color: white;
+    font-family: "Times New Roman", serif;
+  }
+  #footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    background: #69c574;
+    width: 100%;
+    color: black;
+  }
+  footer p {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  </style>
+</head>
+<body>
+  <section id="hotel-logo">
+    <img src="http://javascriptbook.com/code/c03/images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="screen_data">
+  </section>
+  <p id="hotels">hotels</p>
+  <footer id="footer"></footer>
+  <script>
+    <!-- Place JavaScript In Here
+    // Start for #screen data
+    var msg = '<h2>browser window</h2><p>width: ' + window.innerWidth + '</p>'; // create variable to store all data in
+    msg += '<p>height: ' + window.innerHeight + '</p>'; //add height to variable msg
+    msg += '<h2>history</h2><p>items: ' + window.history.length + '</p>'; // add history to variable msg
+    msg += '<h2>screen</h2><p>width: ' + window.screen.width + '</p>'; // add window's screen width to variable msg
+    msg += '<p>height: ' + window.screen.height + '</p>'; // add window's screen height to variable msg
+    msg += '<h2>current location</h2><p>URL: ' + window.location + '</p>' // add window's location to variable msg
+
+    // create a function to display all of the data
+    function display() {
+      document.getElementById('screen_data').innerHTML = msg;
+      // alert('Current Location: ' + window.location); to stick with the book's example, but I personally hate alerts
+    }
+    display(); // call function
+    // end #scree_data
+    // Start #footer
+    var ftr = '<p><b>page title:</b> ' + document.title + '</br>'; // create variable ftr and add value
+        ftr += '<b>page address:</b> ' + document.URL + '</br>'; // adds page URL to variable ftr
+        ftr += '<b>last modified:</b> ' + document.lastModified + '</p>' // add last modified date to variable ftr
+
+        // create function to display content
+        function footer() {
+          document.getElementById('footer').innerHTML = ftr;
+        }
+        footer(); // call function
+    // End Footer
+  -->
+</script>
+<noscript>Please Update Your Browser</noscript>
+</body>
+</html>

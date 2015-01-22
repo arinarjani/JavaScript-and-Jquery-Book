@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <style>
+  /*fonts*/
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("http://javascriptbook.com/code/c03/images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: "Open Sans Condensed" ,sans-serif;
+  }
+  #hotel-logo {
+  }
+  #screen_data {
+    position: absolute;
+    top: 0px;
+    right: 13%;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+    text-align: center;
+    z-index: 10;
+  }
+  h2 {
+    font-weight: normal;
+    padding: 5px;
+    color: aqua;
+    font-size: 2em;
+  }
+  h2:first-of-type {
+    margin-top: 30px;
+  }
+  #hotels {
+    position: absolute;
+    top: 153px;
+    left: 95px;
+    color: white;
+    font-family: "Times New Roman", serif;
+  }
+</style>
+</head>
+<body>
+  <section id="hotel-logo">
+    <img src="http://javascriptbook.com/code/c03/images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="screen_data">
+  </section>
+  <p id="hotels">hotels</p>
+  <script>
+    <!-- Place JavaScript In Here
+        var msg = '<h2>browser window</h2><p>width: ' + window.innerWidth + '</p>'; // create variable to store all data in
+            msg += '<p>height: ' + window.innerHeight + '</p>'; //add height to variable msg
+            msg += '<h2>history</h2><p>items: ' + window.history.length + '</p>'; // add history to variable msg
+            msg += '<h2>screen</h2><p>width: ' + window.screen.width + '</p>'; // add window's screen width to variable msg
+            msg += '<p>height: ' + window.screen.height + '</p>'; // add window's screen height to variable msg
+            msg += '<h2>current location</h2><p>URL: ' + window.location + '</p>' // add window's location to variable msg
+
+            // create a function to display all of the data
+            function display() {
+              document.getElementById('screen_data').innerHTML = msg;
+              // alert('Current Location: ' + window.location); to stick with the book's example, but I personally hate alerts
+            }
+        display(); // call function
+    -->
+  </script>
+  <noscript>Please Update Your Browser</noscript>
+</body>
+</html>

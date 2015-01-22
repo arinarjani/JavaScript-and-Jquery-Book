@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  #hotel-logo {
+  }
+  #hotel-rooms {
+    position: absolute;
+    top: 0px;
+    left: 73%;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+  }
+  table {
+    margin: 50px auto 0 auto;
+    width: 200px;
+    text-align: center;
+  }
+  td {
+    padding: 5px;
+  }
+  #header {
+    color: rgba(0, 255, 153, 0.59);a
+    font-size: 1.5em;
+  }
+  #title {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    font-size: 1.3em;
+  }
+  #rooms {
+    font-size: 5em;
+    color: #f2a655;
+  }
+  #left {
+    position: relative;
+    top: -25px;
+    left: 35%;
+    font-size: 1.2em;
+  }
+  </style>
+</head>
+<body>
+  <section id="hotel-logo">
+    <img src="images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="hotel-rooms">
+    <table>
+      <tr>
+        <td id="header">Hotel Availability</td>
+      </tr>
+      <tr>
+        <td id="title">PARK</td>
+      </tr>
+      <tr>
+        <td id="rooms"></td>
+      </tr>
+    </table>
+    <p id="left">rooms left</p>
+  </section>
+<script>
+      var hotel = {
+        rooms: 45,
+        booked: 2,
+        checkRooms: function() {
+          return this.rooms - this.booked;
+        }
+      };
+      document.getElementById('rooms').innerHTML = hotel.checkRooms();
+</script>
+</body>
+</html>
