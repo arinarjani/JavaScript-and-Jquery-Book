@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <style>
+    body {
+      background: rgba(201, 139, 68, 0.83);
+      color: black;
+    }
+    section {
+      margin: 300px auto 0px auto;
+      width: 500px;
+      background: white;
+    }
+    #message {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    table {
+      width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div id="message"></div>
+    <table>
+      <tr>
+        <td>Custom Sign:</td>
+        <td id="sign"></td>
+      </tr>
+      <tr>
+        <td>Total Tiles:</td>
+        <td id="tiles"></td>
+      </tr>
+      <tr>
+        <td>Subtotal:</td>
+        <td id="subtotal"></td>
+      </tr>
+      <tr>
+        <td>Shipping:</td>
+        <td id="shipping"></td>
+      </tr>
+      <tr>
+        <td>Grand Total:</td>
+        <td id="grand_total"></td>
+      </tr>
+    </table>
+  </section>
+  <script>
+    // define all globals
+    var message = 'Howdy Arin, please check your order below', sign = 'Montegue House', tiles = sign.length, price = tiles * 5, shipping = 7, total = shipping + price;
+    // set up some statements to write into the HTML
+    document.getElementById('message').innerHTML = message; // write the top message
+    document.getElementById('sign').innerHTML = sign; // write out the message wanted by the customer
+    document.getElementById('tiles').innerHTML = tiles; // display total number of tiles used
+    document.getElementById('subtotal').innerHTML = '$' + price; // display price of all tiles used
+    document.getElementById('shipping').innerHTML = '$' + shipping; // display shipping costs
+    document.getElementById('grand_total').innerHTML = '$' + total; // display total amount due
+  </script>
+</body>
+</html>

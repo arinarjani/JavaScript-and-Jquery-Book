@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Quotes Inside of Quotes</title>
+<style>
+  body {
+    color: black;
+    font-family: sans-serif;
+  }
+  h3, p {
+    background: #eee;
+  }
+</style>
+</head>
+<body>
+   <h3 id="title"></h3>
+   <p id="message"></p>
+   <script>
+     // declare variables
+     var title = 'Check Out Our Specials';
+     var message = '<a href=\"#\">25% Off  Storewide!</a>';
+      // write HTML
+     document.getElementById('title').innerHTML = title;
+     document.getElementById('message').innerHTML = message;
+   </script>
+</body>
+</html>

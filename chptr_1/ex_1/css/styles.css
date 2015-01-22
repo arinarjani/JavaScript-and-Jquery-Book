@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic);
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    /*background: url("../images/constructive-backdrop.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    background: #a18957;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+section {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 500px;
+  width: 400px;
+  background: #eee;
+  border: 1px solid #292929;
+}
+#header {
+  height: 200px;
+  margin: 10px;
+  background: rgba(227, 192, 186, 0.78);
+}
+h1 {
+  margin: 0px;
+  position: relative;
+  top: 45%;
+}
+h3 {
+  height: 100px;
+  margin: 10px;
+  background: red;
+}
+p {
+  margin: 10px;
+  height: 100px;
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Simple Function Setup</title>
+  <style></style>
+</head>
+<body>
+  <div id="message">Click The Button Below To See What Happens</div>
+  <div><button onclick="updateMessage()">Click Me</button></div>
+  <script>
+    // define the globals
+    var message = 'You clicked the button , now you are the bee\'s knees';
+    // create a function to update the message in the div
+    function updateMessage() {
+      document.getElementById('message').innerHTML = message;
+    }
+  </script>
+</body>
+</html>
