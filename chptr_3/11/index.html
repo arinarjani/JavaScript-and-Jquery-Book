@@ -1,17 +1,109 @@
 <!doctype html>
 <html>
 <head>
-  <title></title>
+  <title>Example 11 - Messing With Numbers</title>
   <style>
+/*fonts*/
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: url("http://javascriptbook.com/code/c03/images/travelworthy-backdrop.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: "Open Sans Condensed" ,sans-serif;
+  }
+  #hotel-logo {
+  }
+  #string_data {
+    position: absolute;
+    top: 0px;
+    right: 15%;
+    height: 100%;
+    width: 230px;
+    background: #121212;
+    text-align: center;
+    z-index: 10;
+  }
+  h2 {
+    font-weight: normal;
+    padding: 5px;
+    color: aqua;
+    font-size: 2em;
+  }
+  #string_data h2:first-of-type {
+    margin-top: 30px;
+  }
+  #hotels {
+    position: absolute;
+    top: 153px;
+    left: 95px;
+    color: white;
+    font-family: "Times New Roman", serif;
+  }
+  #variable {
+    background: black;
+    color: white;
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #variable p {
+    padding: 5px;
+  }
+  /*#footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    background: #69c574;
+    width: 100%;
+    color: black;
+  }
+  footer p {
+    margin-top: 5px;
+    margin-left: 10px;
+  }*/
   </style>
 </head>
+<section id="hotel-logo">
+    <img src="http://javascriptbook.com/code/c03/images/travelworthy-logo.gif" alt="TravelWorthy Hotels">
+  </section>
+  <section id="string_data">
+  </section>
+  <p id="hotels">hotels</p>
+  <!--<footer id="footer"></footer>-->
 <body>
-<script>
-<!-- place javascript here
+  <script>
+    <!-- place javascript here
+      // create globals and content to display on page
+      var number = 10.23456;
+      var msg = '<h2>Original number</h2><p>' + number + '</p>';
+          msg += '<h2>3 Decimal Places</h2><p>' + number.toFixed(3) + '</p>';
+          msg += '<h2>3 Digits</h2><p>' + number.toPrecision(3) + '</p>';
+      // place content in page byId
+      (function place() {
+        document.getElementById('string_data').innerHTML = msg;
+      }() );
+      /*var msg = 'home sweet home ';
+      var dtls = '<h2>.length:</h2>' + msg.length;
+          dtls += '<h2>toUpperCase():</h2><p>' + msg.toUpperCase() + '</p>';
+          dtls += '<h2>toLowerCase</h2><p>' + msg.toLowerCase() + '</p>';
+          dtls += '<h2>charAt(12)</h2><p>' + msg.charAt(12) + '</p>';
+          dtls += '<h2>indexOf(\'ee\'):</h2><p>' + msg.indexOf('ee') + '</p>';
+          dtls += '<h2>lastIndexOf(\'e\'):</h2><p>' + msg.lastIndexOf('e') + '</p>';
+          dtls += '<h2>substring(4,10): sweet</h2><p>' + msg.substring(4,10) + '</p>';
+          dtls += '<h2>replace(\'home\', \'darn\')</h2><p>' + msg.replace('home', 'darn') + '</p>';
 
--->
-</script>
-<noscript>please update your browser</noscript>
+      (function  text() {
+        document.getElementById('string_data').innerHTML = dtls;
+      }() ); */
+    -->
+  </script>
+  <noscript>please update your browser</noscript>
 </body>
 </html>
