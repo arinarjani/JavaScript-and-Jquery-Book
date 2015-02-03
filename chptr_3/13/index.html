@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Example 11 - Messing With Numbers</title>
+  <title>Example 13 - Messing With Dates</title>
   <style>
 /*fonts*/
   @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
@@ -80,15 +80,13 @@
 <body>
   <script>
     <!-- place javascript here
-      // create globals and content to display on page
-      var number = 10.88756;
-      var msg = '<h2>Original number</h2><p>' + number + '</p>';
-          msg += '<h2>3 Decimal Places</h2><p>' + number.toFixed(3) + '</p>';
-          msg += '<h2>3 Digits</h2><p>' + number.toPrecision(3) + '</p>';
-      // place content in page byId
-      (function place() {
-        document.getElementById('string_data').innerHTML = msg;
-      }() );
+      // create new instance of object Date()
+      var date = new Date();
+      var today = date.toDateString(),
+          year = date.getFullYear(),
+          fullTime = date.toString();
+      // pass information onto webpage
+      document.getElementById('string_data').innerHTML = '<p>copyright &copy; ' + year + '</p>';
     -->
   </script>
   <noscript>please update your browser</noscript>

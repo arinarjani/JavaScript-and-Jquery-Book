@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Example 11 - Messing With Numbers</title>
+  <title>Example 12 - Messing With Numbers</title>
   <style>
 /*fonts*/
   @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
@@ -80,15 +80,11 @@
 <body>
   <script>
     <!-- place javascript here
-      // create globals and content to display on page
-      var number = 10.88756;
-      var msg = '<h2>Original number</h2><p>' + number + '</p>';
-          msg += '<h2>3 Decimal Places</h2><p>' + number.toFixed(3) + '</p>';
-          msg += '<h2>3 Digits</h2><p>' + number.toPrecision(3) + '</p>';
-      // place content in page byId
-      (function place() {
-        document.getElementById('string_data').innerHTML = msg;
-      }() );
+      // create globals
+      var random_number = '<h3>Random Number</h3>';
+          random_number += '<p>' + Math.round(Math.random() * 7 + 1) + '</p>';
+      // create function to display random_number
+      document.getElementById('string_data').innerHTML = random_number;
     -->
   </script>
   <noscript>please update your browser</noscript>
